@@ -1,0 +1,19 @@
+@import "src/styles.scss";
+
+footer {
+  background-color: $main-color;
+  color: $white-color;
+}
+
+a {
+  color: $white-color;
+  text-decoration: none;
+  &:hover {
+    color: $hover-ycolor;
+  }
+}
+
+.logoText,
+.socail {
+  font-size: 0.8rem;
+}

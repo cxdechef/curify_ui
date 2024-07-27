@@ -1,0 +1,23 @@
+@import "src/styles.scss";
+
+#heroSection {
+  background-color: $main-color;
+  color: $white-color;
+}
+
+h2 {
+  color: $white-color;
+  font-family: "Gasoek One", sans-serif;
+}
+
+.btn-primary {
+  border-color: $white-color;
+  border-radius: 9999px;
+  color: $white-color;
+
+  &:hover {
+    background-color: $white-color;
+    border-color: $hover-color;
+    color: $main-color;
+  }
+}

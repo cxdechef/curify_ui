@@ -1,0 +1,115 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card border-0 shadow rounded-3">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Sign up</h3>
+          <form [formGroup]="signupForm">
+            <div class="form-group mb-3">
+              <label for="firstName" class="mb-1">First Name</label>
+              <input
+                type="text"
+                formControlName="firstName"
+                class="form-control"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter first name"
+                [(ngModel)]="user.firstName"
+              />
+              <span
+                class="text-danger"
+                *ngIf="
+                  signupForm.controls['firstName'].dirty &&
+                  signupForm.hasError('required', 'firstName')
+                "
+              >
+                *First name is required.</span
+              >
+            </div>
+            <div class="form-group mb-3">
+              <label for="lastName" class="mb-1">Last Name</label>
+              <input
+                type="text"
+                formControlName="lastName"
+                class="form-control"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter last name"
+                [(ngModel)]="user.lastName"
+              />
+              <span
+                class="text-danger"
+                *ngIf="
+                  signupForm.controls['lastName'].dirty &&
+                  signupForm.hasError('required', 'lastName')
+                "
+              >
+                *Last name is required.</span
+              >
+            </div>
+            <div class="form-group mb-3">
+              <label for="email" class="mb-1">Email</label>
+              <input
+                type="email"
+                formControlName="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+                [(ngModel)]="user.email"
+              />
+              <span
+                class="text-danger"
+                *ngIf="
+                  signupForm.controls['email'].dirty &&
+                  signupForm.hasError('required', 'email')
+                "
+              >
+                *Email is required.</span
+              >
+            </div>
+            <div class="form-group mb-3">
+              <label for="password" class="mb-1">Password</label>
+              <input
+                type="password"
+                formControlName="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                [(ngModel)]="user.password"
+              />
+              <span
+                class="text-danger"
+                *ngIf="
+                  signupForm.controls['password'].dirty &&
+                  signupForm.hasError('required', 'password')
+                "
+              >
+                *Password is required.</span
+              >
+            </div>
+            <!-- <div class="form-group mb-3">
+                <label for="confirmPassword" class="mb-1">Confirm password</label>
+                <input type="confirmPassword" class="form-control" id="confirmPassword" placeholder="Enter password">
+              </div> -->
+            <div class="my-3 d-flex align-items-center gap-2">
+              <button
+                type="submit"
+                (click)="onSubmit()"
+                type="submit"
+                [disabled]="signupForm.invalid"
+                class="btn btn-primary"
+              >
+                Create an account
+              </button>
+              <a class="nav-link" routerLink="/signin"
+                >Already have an account? Sign In</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

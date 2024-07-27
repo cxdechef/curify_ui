@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg px-3">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <h1 class="fs-2">curify.</h1>
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <img src="../../../assets/images/menu.svg" alt="" />
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/providers">PROVIDERS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact">CONTACT US</a>
+      </li>
+    </ul>
+
+    <div class="d-flex flex-column flex-lg-row align-items-center gap-2">
+      <div class="d-flex justify-content-between w-100">
+        <div
+          class="d-flex align-items-center mb-2 mb-lg-0"
+          (click)="toggleSearch()"
+        >
+          <img
+            src="../../../assets/images/search.svg"
+            class=""
+            width="30"
+            alt=""
+          />
+        </div>
+
+        <form class="d-flex" *ngIf="isSearchVisible">
+          <input
+            class="form-control me-2 w-100"
+            type="search"
+            placeholder="Search Providers"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+
+      <button
+        *ngIf="!isLoggedCheck()"
+        class="btn btn-primary col-12 col-lg-auto"
+        routerLink="/signin"
+      >
+        SIGN IN
+      </button>
+      <button
+        *ngIf="isLoggedCheck()"
+        (click)="signOut()"
+        class="btn btn-danger col-12 col-lg-auto"
+      >
+        SIGN OUT
+      </button>
+    </div>
+  </div>
+</nav>

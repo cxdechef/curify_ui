@@ -1,0 +1,82 @@
+// $main-color: #0043f1;
+// $title-color: #002c58;
+// $text-color: #000014;
+// $hover-color: #0030a8;
+// $hover-ycolor: #e9f100;
+// $white-color: #fdfdfd;
+// $red-color: #f10040;
+// // $main-color: #1DB954;
+
+$main-color: #0019ff;
+$title-color: #293eff;
+$text-color: #000014;
+$hover-color: #0019ff;
+$hover-ycolor: #ffff00;
+$hover-rcolor: #ff0051;
+$white-color: #fdfdfd;
+$red-color: #ff0051;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $white-color;
+  // background-color: #d8e0db;
+  color: $text-color;
+  font-family: "Urbanist", sans-serif;
+}
+
+h1 {
+  color: $main-color;
+  font-family: "Agbalumo";
+}
+
+h2 {
+  color: $title-color;
+  font-family: "Gasoek One", sans-serif;
+}
+
+h3 {
+  color: $title-color !important;
+}
+
+.btn-primary {
+  background-color: $main-color;
+  border-color: $main-color;
+  border-radius: 9999px;
+
+  &:hover {
+    background-color: $hover-color;
+    border-color: $hover-color;
+  }
+}
+
+.btn-danger {
+  background-color: $red-color;
+  border-color: $red-color;
+  border-radius: 9999px;
+
+  &:hover {
+    background-color: $hover-rcolor;
+    border-color: $hover-rcolor;
+  }
+}
+
+.text-danger {
+  color: $red-color !important;
+}
+
+.btn-outline-success,
+.btn-outline-primary {
+  border-radius: 9999px;
+  color: $main-color;
+  border-color: $main-color;
+  &:hover {
+    color: $white-color;
+    background-color: $main-color;
+  }
+}
+
+.nav-link:hover {
+  color: $hover-color;
+}

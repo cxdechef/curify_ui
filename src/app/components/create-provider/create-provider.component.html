@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card border-0 shadow rounded-3">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Create New Provider</h3>
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group mb-3">
+              <label for="name" class="mb-1">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Enter name"
+                [(ngModel)]="createProvider.name"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="specialties" class="mb-1">Specialties</label>
+              <input
+                type="text"
+                class="form-control"
+                id="specialties"
+                name="specialties"
+                placeholder="Enter specialties (comma-separated)"
+                [(ngModel)]="createProvider.specialties"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="location" class="mb-1">Location</label>
+              <input
+                type="text"
+                class="form-control"
+                id="location"
+                name="location"
+                placeholder="Enter location"
+                [(ngModel)]="createProvider.location"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="image" class="mb-1">Image</label>
+              <input
+                type="text"
+                class="form-control"
+                id="imageUrl"
+                name="imageUrl"
+                placeholder="Enter imageUrl"
+                [(ngModel)]="createProvider.imageUrl"
+              />
+              <!-- <input type="file" class="form-control" id="image" name="image"> -->
+              <!-- <input type="file" class="form-control" id="image" name="image" (change)="onImageSelected($event)"> -->
+            </div>
+
+            <div class="my-3 d-flex align-items-center gap-2">
+              <button type="submit" class="btn btn-primary">
+                Create Provider
+              </button>
+              <a class="nav-link" routerLink="/providers">View Providers</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
